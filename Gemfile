@@ -42,3 +42,9 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
+
+gem "pry"
+gem "dry-system"
+gem "dry-effects"
+gem "rom"
+gem "rom-sql"
