@@ -48,3 +48,4 @@ gem "dry-system"
 gem "dry-effects"
 gem "rom"
 gem "rom-sql"
+gem 'dotenv-rails', groups: [:development, :test]
