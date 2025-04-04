@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # Class fetched from another project
+# Tweaked to use dry-effects and work with multiple databases
 class BaseRepository
   include Dry::Effects.Resolve(:databases)
 
