@@ -4,16 +4,16 @@ require "test_helper"
 
 class ContractsControllerTest < ActionDispatch::IntegrationTest
   test "should get index and return json" do
-    Spacinov::Container["db1.container"].relations.contracts.dataset.truncate(cascade: true)
-    Spacinov::Container["db2.container"].relations.contracts.dataset.truncate(cascade: true)
+    Depozen::Container["db1.container"].relations.contracts.dataset.truncate(cascade: true)
+    Depozen::Container["db2.container"].relations.contracts.dataset.truncate(cascade: true)
 
     # db 1 contracts
-    Spacinov::Container["db1.container"].relations.contracts.command(:create).call(name: "Contract A", description: "", created_at: Time.now, updated_at: Time.now)
-    Spacinov::Container["db1.container"].relations.contracts.command(:create).call(name: "Contract B", description: "", created_at: Time.now, updated_at: Time.now)
+    Depozen::Container["db1.container"].relations.contracts.command(:create).call(name: "Contract A", description: "", created_at: Time.now, updated_at: Time.now)
+    Depozen::Container["db1.container"].relations.contracts.command(:create).call(name: "Contract B", description: "", created_at: Time.now, updated_at: Time.now)
     # db 2 contracts
-    Spacinov::Container["db2.container"].relations.contracts.command(:create).call(name: "Contract 1", description: "", created_at: Time.now, updated_at: Time.now)
-    Spacinov::Container["db2.container"].relations.contracts.command(:create).call(name: "Contract 2", description: "", created_at: Time.now, updated_at: Time.now)
-    Spacinov::Container["db2.container"].relations.contracts.command(:create).call(name: "Contract 3", description: "", created_at: Time.now, updated_at: Time.now)
+    Depozen::Container["db2.container"].relations.contracts.command(:create).call(name: "Contract 1", description: "", created_at: Time.now, updated_at: Time.now)
+    Depozen::Container["db2.container"].relations.contracts.command(:create).call(name: "Contract 2", description: "", created_at: Time.now, updated_at: Time.now)
+    Depozen::Container["db2.container"].relations.contracts.command(:create).call(name: "Contract 3", description: "", created_at: Time.now, updated_at: Time.now)
 
     get "/contracts", as: :json
 

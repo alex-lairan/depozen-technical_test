@@ -1,6 +1,6 @@
-# 🚀 Spacinov – Test technique par Alexandre Lairan
+# 🚀 Depozen – Test technique par Alexandre Lairan
 
-Ce projet est le **test technique Spacinov** réalisé par **Alexandre Lairan**.
+Ce projet est le **test technique Depozen** réalisé par **Alexandre Lairan**.
 
 ---
 

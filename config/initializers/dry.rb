@@ -1,3 +1,3 @@
-require_relative "../../lib/spacinov/container"
+require_relative "../../lib/depozen/container"
 
-Spacinov::Container.finalize!
+Depozen::Container.finalize!

@@ -1,4 +1,4 @@
-Spacinov::Container.register_provider(:database) do
+Depozen::Container.register_provider(:database) do
   prepare do
     require "rom-sql"
     require "rom"

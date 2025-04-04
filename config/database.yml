@@ -22,13 +22,13 @@ default: &default
 
 development:
   <<: *default
-  database: spacinov_development
+  database: depozen_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: spacinov
+  #username: depozen
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -56,7 +56,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: spacinov_test
+  database: depozen_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,18 +81,18 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: spacinov_production
-    username: spacinov
+    database: depozen_production
+    username: depozen
     password: <%= ENV["SPACINOV_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
-    database: spacinov_production_cache
+    database: depozen_production_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: spacinov_production_queue
+    database: depozen_production_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: spacinov_production_cable
+    database: depozen_production_cable
     migrations_paths: db/cable_migrate

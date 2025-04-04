@@ -26,7 +26,7 @@ class BaseRepository
   end
 
   def initialize
-    @containers = databases.each_with_object({}) { |db, acc| acc[db] = Spacinov::Container[db] }
+    @containers = databases.each_with_object({}) { |db, acc| acc[db] = Depozen::Container[db] }
     @current_container = @containers[databases.first]
   end
 
